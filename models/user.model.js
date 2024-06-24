@@ -8,11 +8,11 @@ const userSchema = new mongoose.Schema({
 });
 
 const userModel = mongoose.model('user', userSchema);
-// console.log(userSchema);
+
 const seedUserData = () => {
   console.log();
   const newUser = new userModel({
-    email: process.env.EMAIL,
+    email: 'nawalahmad.bme@gmail.com',
     books: [
       {
         name: 'When Nietzsche Wept',
@@ -36,6 +36,5 @@ const seedUserData = () => {
 
   newUser.save();
 };
-
 
 module.exports = { userModel, seedUserData };
